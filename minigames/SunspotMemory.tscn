@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://basoprxnx75yo"]
+
+[ext_resource type="Script" uid="uid://b151hyjihh1b1" path="res://minigames/sunspot_memory.gd" id="1_6dhss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q81a2"]
+
+[node name="SunspotMemory" type="Node2D" unique_id=1327943032]
+script = ExtResource("1_6dhss")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1105386911]
+position = Vector2(-960, -540)
+anchor_mode = 0
+
+[node name="Sun" type="Node2D" parent="." unique_id=502191722]
+
+[node name="Area2D" type="Area2D" parent="Sun" unique_id=1861668325]
+position = Vector2(960, 540)
+
+[node name="Grid11" type="CollisionShape2D" parent="Sun/Area2D" unique_id=69888504]
+z_index = 100
+position = Vector2(960, 540)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid12" type="CollisionShape2D" parent="Sun/Area2D" unique_id=154208062]
+z_index = 100
+position = Vector2(1040, 540)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid13" type="CollisionShape2D" parent="Sun/Area2D" unique_id=55305005]
+z_index = 100
+position = Vector2(1120, 540)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid10" type="CollisionShape2D" parent="Sun/Area2D" unique_id=165883070]
+z_index = 100
+position = Vector2(880, 540)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid9" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1829970431]
+z_index = 100
+position = Vector2(800, 540)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid6" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1833513258]
+z_index = 100
+position = Vector2(960, 460)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid7" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1930187546]
+z_index = 100
+position = Vector2(1040, 460)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid8" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1040658773]
+z_index = 100
+position = Vector2(1120, 460)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid5" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1137630283]
+z_index = 100
+position = Vector2(880, 460)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid2" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1893255438]
+z_index = 100
+position = Vector2(960, 380)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid3" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1868920202]
+z_index = 100
+position = Vector2(1040, 380)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid1" type="CollisionShape2D" parent="Sun/Area2D" unique_id=2025372214]
+z_index = 100
+position = Vector2(880, 380)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid20" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1146728082]
+z_index = 100
+position = Vector2(960, 700)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid21" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1737530967]
+z_index = 100
+position = Vector2(1040, 700)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid19" type="CollisionShape2D" parent="Sun/Area2D" unique_id=969435494]
+z_index = 100
+position = Vector2(880, 700)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid4" type="CollisionShape2D" parent="Sun/Area2D" unique_id=723940249]
+z_index = 100
+position = Vector2(800, 460)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid16" type="CollisionShape2D" parent="Sun/Area2D" unique_id=313741531]
+z_index = 100
+position = Vector2(960, 620)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid17" type="CollisionShape2D" parent="Sun/Area2D" unique_id=928916458]
+z_index = 100
+position = Vector2(1040, 620)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid18" type="CollisionShape2D" parent="Sun/Area2D" unique_id=332872081]
+z_index = 100
+position = Vector2(1120, 620)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid15" type="CollisionShape2D" parent="Sun/Area2D" unique_id=2131698070]
+z_index = 100
+position = Vector2(880, 620)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")
+
+[node name="Grid14" type="CollisionShape2D" parent="Sun/Area2D" unique_id=1064848501]
+z_index = 100
+position = Vector2(800, 620)
+scale = Vector2(4, 4)
+shape = SubResource("RectangleShape2D_q81a2")

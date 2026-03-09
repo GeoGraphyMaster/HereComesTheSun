@@ -1,0 +1,417 @@
+[gd_scene format=3 uid="uid://c1r1jm5xb2oq8"]
+
+[ext_resource type="Texture2D" uid="uid://cy2b13dptxvew" path="res://25x24x32RGB.png" id="1_he2vy"]
+[ext_resource type="Script" uid="uid://duj17iqjmql53" path="res://analizer2.gd" id="1_ogqat"]
+[ext_resource type="Script" uid="uid://lkt87h16s3gc" path="res://sun.gd" id="2_j7eq7"]
+[ext_resource type="Texture2D" uid="uid://bgbdyg0mrdvpj" path="res://SunMagnetogramColor512x2TP.png" id="3_jxxc5"]
+[ext_resource type="Texture2D" uid="uid://7dl8mrskrcea" path="res://CrossSectionOfSun.png" id="4_ogqat"]
+[ext_resource type="Script" uid="uid://bt6kiik5dvbr3" path="res://magnetic_veiw.gd" id="5_60tus"]
+[ext_resource type="Texture2D" uid="uid://c88rb06onq4ev" path="res://sr27c48ca88edaws3 (1) (1).png" id="5_ogqat"]
+[ext_resource type="Script" uid="uid://qm6of161wj8j" path="res://cross_section_veiw.gd" id="7_51m47"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8ahdl"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_000.jpg-77b8139af038234b05d2b9024a497f87.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jxxc5"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_001.jpg-1d2910544daec66815ff85dd1c11ef2e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qlsbd"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_002.jpg-6c464b8844c51394e191311871bf3ac7.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_60tus"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_003.jpg-42a8ceb70ab6ab3e86229ab509a29a15.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ogqat"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_004.jpg-d00762d74a7a871ab9be56838044e80f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_51m47"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_005.jpg-e49295a8d7d569e528a9aecffb3882f9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j7eq7"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_006.jpg-874f0e2ddc658d1113cc6b2e1c741eb2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jg2xp"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_007.jpg-42e1be356bf25747134bae643ac7ab64.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_28li6"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_008.jpg-439233191c55ebf0b65bf7a16a260060.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hw4lv"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_009.jpg-fb576efeeec7d26de6ae738f79da8c3e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oux8b"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_010.jpg-054f9c2691d0245fc3bce69e0348b9d3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v167o"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_011.jpg-c72fda13bfbcb2e052c75a39ef074588.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mkhwd"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_012.jpg-5234016818a5a57f843b9affe2f95fc5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xqais"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_013.jpg-e4e0d2be16002a5e5778543183cc99d7.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rb4jp"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_014.jpg-0cefe4e6a59c567b1338ea4fece08ed3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ndmlc"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_015.jpg-a477e87dcbf417a191693849a6e2085e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wplv"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_016.jpg-8da2ec631f941b43739bc1cc15d4c37f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w7a6g"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_017.jpg-bae851a0c595f1cdde7292dfc2fd8478.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6k30l"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_018.jpg-c3d5af48f65dcff638fe593465f238a6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_opkuw"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_019.jpg-78d30a621a2abb6247368bd8d125297e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_25qk0"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_020.jpg-839c6ed851970a51bb41603f01f3d730.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_irnbo"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_021.jpg-38f74669e1de4c836a791e2c6ef9a3a4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ry4ru"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_022.jpg-e49c963109a792c5db5fa135dd69c135.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x3rer"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_023.jpg-a2322e64d2254eeb78852662038d1dc9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n1xqc"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_024.jpg-0e3d561064dc7ba10f21cd57ec963eff.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lfo88"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_025.jpg-58c10f9b84fdafe9762eeb5d5d75d49b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_okkcu"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_026.jpg-2df1e694075560a2e35202c4cfa21aa9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xy27k"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_027.jpg-b1508663a2574d3da57ae60f9ffbfa5d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rxlt8"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_028.jpg-6efe1ca5e0f87b51aea14c5f529be960.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a0xt1"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_029.jpg-d4113244c1b3eeadf7c56810a18be0e2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_djg26"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_030.jpg-5dac3da74122d9ab1b5e62efa3bbf3f7.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0c3iw"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_031.jpg-c1b9651f16c2f5d55a7898856acdfe8f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ygtnx"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_032.jpg-cb57c806188ee94407b7890514161865.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n11fy"]
+load_path = "res://.godot/imported/pixelShader_3_3_2026_5_39_38 PM_033.jpg-7a2be892f25a865d327ed10db8979ba2.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ogqat"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_8ahdl")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_jxxc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qlsbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_60tus")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ogqat")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_51m47")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_j7eq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_jg2xp")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_28li6")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_hw4lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_oux8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_v167o")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_mkhwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_xqais")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_rb4jp")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ndmlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_6wplv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_w7a6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_6k30l")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_opkuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_25qk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_irnbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ry4ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_x3rer")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_n1xqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_lfo88")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_okkcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_xy27k")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_rxlt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_a0xt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_djg26")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_0c3iw")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ygtnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_n11fy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51m47"]
+size = Vector2(151.22594, 139.03058)
+
+[sub_resource type="Theme" id="Theme_60tus"]
+default_font_size = 35
+
+[sub_resource type="DPITexture" id="DPITexture_7mnew"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><linearGradient id=\"a\" x2=\"0\" y2=\"16\" gradientUnits=\"userSpaceOnUse\"><stop offset=\".188\" stop-color=\"#ff4545\"/><stop stop-color=\"#ffe345\"/><stop offset=\".313\" stop-color=\"#ffe345\"/><stop stop-color=\"#80ff45\"/><stop offset=\".438\" stop-color=\"#80ff45\"/><stop stop-color=\"#45ffa2\"/><stop offset=\".563\" stop-color=\"#45ffa2\"/><stop stop-color=\"#45d7ff\"/><stop offset=\".688\" stop-color=\"#45d7ff\"/><stop stop-color=\"#8045ff\"/><stop offset=\".813\" stop-color=\"#8045ff\"/><stop stop-color=\"#ff4596\"/></linearGradient><path fill=\"url(#a)\" d=\"M1 14a1 1 0 0 0 1 1h6.037a5.044 5.044 0 0 1-.92-2A4.735 4.735 0 0 1 7 12c0-.356.045-.687.117-1 .18-.784.546-1.435.938-2 .14-.203.285-.402.424-.584.386-.505.763-.968 1.103-1.416.257-.338.495-.67.686-1a2 2 0 0 1 3.465 0c.188.327.428.66.685 1 .186.246.38.494.582.75V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1Zm11-7c-.429.746-.946 1.387-1.429 2-.571.69-1.066 1.342-1.34 2-.138.326-.231.656-.231 1s.072.686.184 1c.413 1.163 1.512 2 2.816 2s2.402-.837 2.816-2c.112-.314.184-.656.184-1s-.094-.674-.231-1c-.275-.658-.77-1.31-1.34-2-.484-.613-1-1.254-1.43-2z\"/></svg>
+"
+saturation = 2.0
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="Theme" id="Theme_ogqat"]
+default_font_size = 45
+EditorIcons/icons/StyleBoxFlat = SubResource("DPITexture_7mnew")
+
+[sub_resource type="Theme" id="Theme_51m47"]
+default_font_size = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ahdl"]
+bg_color = Color(0.2231029, 0.2231029, 0.22310278, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+
+[node name="AnalizeScene" type="Node2D" unique_id=546659017]
+z_index = 100
+script = ExtResource("1_ogqat")
+
+[node name="MiniGameContainer" type="Node2D" parent="." unique_id=633924950]
+
+[node name="Sun" type="Node2D" parent="." unique_id=972034877]
+
+[node name="Node2D" type="StaticBody2D" parent="Sun" unique_id=1700177246]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sun/Node2D" unique_id=1521561603]
+z_index = 1
+texture_filter = 1
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_ogqat")
+frame = 2
+
+[node name="Area2D" type="Area2D" parent="Sun/Node2D" unique_id=1262346333]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun/Node2D/Area2D" unique_id=1609871796]
+z_index = 3
+rotation = -3.1415925
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_51m47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun/Node2D" unique_id=2134645630]
+z_index = 3
+rotation = -3.1415925
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_51m47")
+
+[node name="Shape" type="Sprite2D" parent="Sun" unique_id=1979190247]
+position = Vector2(0, 1)
+scale = Vector2(2000, 2000)
+texture = ExtResource("1_he2vy")
+
+[node name="SunMagnetogram" type="Sprite2D" parent="Sun" unique_id=913182603]
+visible = false
+texture_filter = 1
+scale = Vector2(0.84, 0.84)
+texture = ExtResource("3_jxxc5")
+
+[node name="Area2D" type="Area2D" parent="Sun/SunMagnetogram" unique_id=233817727]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sun/SunMagnetogram/Area2D" unique_id=975554413]
+z_index = 3
+rotation = -3.1415925
+scale = Vector2(3.5, 3.5)
+shape = SubResource("RectangleShape2D_51m47")
+
+[node name="SunCrossSection" type="Sprite2D" parent="Sun" unique_id=675956010]
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("4_ogqat")
+
+[node name="sun_view_manager" type="Node2D" parent="Sun" unique_id=713127682]
+script = ExtResource("2_j7eq7")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1596083885]
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="UI" unique_id=2121288579]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MissionLabel" type="RichTextLabel" parent="UI/Control" unique_id=364526320]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -490.0
+offset_right = 500.0
+offset_bottom = -440.0
+theme = SubResource("Theme_60tus")
+text = "MissionLabel
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="WarningLabel" type="RichTextLabel" parent="UI/Control" unique_id=988302204]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -410.0
+offset_right = 500.0
+offset_bottom = -335.0
+theme = SubResource("Theme_ogqat")
+text = "WarningLabel
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RemainingAttempts" type="RichTextLabel" parent="UI/Control" unique_id=1816717741]
+layout_mode = 0
+offset_left = -915.0
+offset_top = -521.0
+offset_right = -418.0
+offset_bottom = -437.0
+theme = SubResource("Theme_51m47")
+text = "Remaining Attemps:"
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/Control" unique_id=1985646241]
+layout_mode = 0
+offset_left = -940.0
+offset_top = 399.0
+offset_right = -820.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ahdl")
+metadata/_edit_use_anchors_ = true
+
+[node name="MagneticVeiw" type="Button" parent="UI/Control/PanelContainer" unique_id=1006630279]
+texture_filter = 1
+layout_mode = 2
+theme_override_icons/icon = ExtResource("5_ogqat")
+icon = ExtResource("5_ogqat")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_60tus")
+
+[node name="CrossSectionContainer" type="PanelContainer" parent="UI/Control" unique_id=1930719307]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.072916664
+anchor_top = 0.0027777778
+anchor_right = 0.072916664
+anchor_bottom = 0.0027777778
+offset_left = -940.0
+offset_top = 397.0
+offset_right = -820.0
+offset_bottom = 517.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ahdl")
+metadata/_edit_use_anchors_ = true
+
+[node name="CrossSectionVeiw" type="Button" parent="UI/Control/CrossSectionContainer" unique_id=100097090]
+texture_filter = 1
+layout_mode = 2
+theme_override_icons/icon = ExtResource("5_ogqat")
+icon = ExtResource("4_ogqat")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("7_51m47")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=742683039]
+offset_left = -940.0
+offset_top = 399.0
+offset_right = -820.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ahdl")
+metadata/_edit_use_anchors_ = true
+
+[node name="MagneticVeiw" type="Button" parent="PanelContainer" unique_id=1175547844]
+texture_filter = 1
+layout_mode = 2
+theme_override_icons/icon = ExtResource("5_ogqat")
+icon = ExtResource("5_ogqat")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_60tus")

@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://ed7avo4o7p35"]
+
+[ext_resource type="Script" uid="uid://v7clvkw2lt84" path="res://minigames/reserch_summery.gd" id="1_tmc5s"]
+[ext_resource type="Texture2D" uid="uid://cy2b13dptxvew" path="res://25x24x32RGB.png" id="2_ll3yb"]
+[ext_resource type="Script" uid="uid://w3qivgbthfm8" path="res://minigames/computer.gd" id="3_asg4g"]
+[ext_resource type="Script" uid="uid://d2sjw63lgn43c" path="res://Johnson.gd" id="4_d4m2n"]
+[ext_resource type="Texture2D" uid="uid://dim41ait115b5" path="res://johnson.png" id="5_mdabe"]
+[ext_resource type="Texture2D" uid="uid://bcqrwga8k3ln7" path="res://Sattelite2.png" id="6_evhnb"]
+[ext_resource type="StyleBox" uid="uid://dfwn75p86kpmh" path="res://new_style_box_flat.tres" id="7_oxn43"]
+[ext_resource type="StyleBox" uid="uid://c717xad44wbvv" path="res://new_style_box_empty.tres" id="7_q7mod"]
+[ext_resource type="StyleBox" uid="uid://blejqf51hufqt" path="res://new_style_box_flat2.tres" id="8_ll3yb"]
+[ext_resource type="Script" uid="uid://0ahgpwso287s" path="res://minigames/ReserchSummeryText.gd" id="9_d4m2n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grx8k"]
+size = Vector2(41.25, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea6cm"]
+size = Vector2(7, 14)
+
+[sub_resource type="Theme" id="Theme_go1m8"]
+
+[sub_resource type="Theme" id="Theme_6d253"]
+
+[sub_resource type="Theme" id="Theme_tmc5s"]
+default_font_size = 20
+
+[node name="ReserchSummery" type="Node2D" unique_id=609304242]
+position = Vector2(-15000, 0)
+script = ExtResource("1_tmc5s")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=637445300]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_d4m2n")
+acceleration = 200.0
+max_speed = 100.0
+slowdown = 50.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1158876239]
+texture_filter = 1
+texture = ExtResource("5_mdabe")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=2056206924]
+polygon = PackedVector2Array(4, 16, -4, 16, -4, 9, -7, 9, -7, 8, -8, 8, -8, 4, -9, 4, -9, -1, -8, -1, -8, -3, -7, -3, -7, -4, -5, -4, -5, -6, -3, -6, -3, -7, -4, -7, -4, -9, -5, -9, -5, -10, -6, -10, -6, -14, -5, -14, -5, -15, -4, -15, -4, -16, 3, -16, 3, -15, 4, -15, 4, -8, 3, -8, 3, -7, 3, -6, 2, -6, 2, -5, 4, -5, 4, -3, 5, -3, 5, 1, 6, 1, 6, 6, 4, 6, 4, 9, 3, 9, 3, 14, 4, 14)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=940289592]
+z_index = 1
+zoom = Vector2(4, 4)
+
+[node name="Computer" type="StaticBody2D" parent="." unique_id=319759412]
+
+[node name="Background" type="Sprite2D" parent="Computer" unique_id=1038304247]
+scale = Vector2(50000, 50000)
+texture = ExtResource("2_ll3yb")
+
+[node name="Sattelite" type="Sprite2D" parent="Computer" unique_id=423463945]
+texture_filter = 1
+texture = ExtResource("6_evhnb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer" unique_id=237555907]
+position = Vector2(-19, 13)
+shape = SubResource("RectangleShape2D_grx8k")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Computer" unique_id=2034418596]
+position = Vector2(-19, -13)
+shape = SubResource("RectangleShape2D_grx8k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Computer" unique_id=1901284327]
+polygon = PackedVector2Array(1, 13, 11, 22, 31, 22, 42, 10, 42, -10, 31, -22, 11, -22, 2, -14, 1, -13, 3, -13, 12, -21, 30, -21, 41, -10, 41, -7, 41, 7, 41, 10, 30, 21, 11, 21, 1, 12)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Computer" unique_id=1855959028]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(-40, 14, -45, 9, -45, 3, -43, 1, -43, -1, -45, -3, -45, -9, -40, -14, -40, -12, -43, -9, -43, -4, -41, -2, -41, 2, -43, 4, -43, 9, -40, 12)
+
+[node name="Area2D" type="Area2D" parent="Computer" unique_id=2231997]
+script = ExtResource("3_asg4g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer/Area2D" unique_id=271677200]
+position = Vector2(37.5, 0)
+shape = SubResource("RectangleShape2D_ea6cm")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=4509408]
+script = ExtResource("9_d4m2n")
+
+[node name="Control" type="Control" parent="UI" unique_id=20312812]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ReserchSheet" type="PanelContainer" parent="UI/Control" unique_id=155168779]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 550.0
+offset_top = 40.0
+offset_right = 1330.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_go1m8")
+
+[node name="Panel" type="Panel" parent="UI/Control/ReserchSheet" unique_id=2134757087]
+z_index = 5
+layout_mode = 2
+theme = SubResource("Theme_6d253")
+theme_override_styles/panel = ExtResource("7_oxn43")
+
+[node name="ReserchSummeryLabel" type="RichTextLabel" parent="UI/Control/ReserchSheet" unique_id=351431273]
+z_index = 6
+layout_mode = 2
+theme_override_colors/default_color = Color(0.07420542, 0.039952617, 0.008680938, 1)
+theme_override_font_sizes/normal_font_size = 48
+text = "Reserch Summery"
+horizontal_alignment = 1
+
+[node name="ReserchSummery" type="RichTextLabel" parent="UI/Control" unique_id=575510873]
+z_index = 7
+layout_mode = 0
+offset_left = 570.0
+offset_top = 154.0
+offset_right = 1350.0
+offset_bottom = 894.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = ExtResource("7_q7mod")
+text = "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+horizontal_alignment = 1
+
+[node name="HideButton" type="Button" parent="UI" unique_id=1612792686]
+z_index = 6
+offset_left = 1178.0
+offset_top = 922.0
+offset_right = 1322.0
+offset_bottom = 994.0
+theme = SubResource("Theme_tmc5s")
+theme_override_styles/normal = ExtResource("8_ll3yb")
+theme_override_styles/pressed = ExtResource("8_ll3yb")
+theme_override_styles/hover = ExtResource("8_ll3yb")
+text = "Finished
+Reading"
