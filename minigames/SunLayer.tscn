@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://didu5f21qqqgh"]
+
+[ext_resource type="Texture2D" uid="uid://c72ilwixgba8j" path="res://image (2).png" id="1_jxtxx"]
+[ext_resource type="Texture2D" uid="uid://do8bgjdxcu78m" path="res://image (3).png" id="2_wb4g2"]
+[ext_resource type="Texture2D" uid="uid://d4kb760h5104u" path="res://image (4).png" id="3_v0pok"]
+[ext_resource type="Texture2D" uid="uid://8lwmt3sekhkp" path="res://image (5).png" id="4_wii62"]
+[ext_resource type="Texture2D" uid="uid://bnxofree2j4lu" path="res://image (6).png" id="5_vlt52"]
+[ext_resource type="Texture2D" uid="uid://bbg1cq7dgt4x8" path="res://image (7).png" id="6_iew4b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0uneq"]
+load_path = "res://.godot/imported/image (1).png-33ee91bf1b09a76bbd697aff9013fd0f.ctex"
+
+[node name="SunLayer" type="Node2D" unique_id=1190992409]
+
+[node name="Image(1)" type="Sprite2D" parent="." unique_id=328332676]
+position = Vector2(950, 550)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_0uneq")
+
+[node name="Image(2)" type="Sprite2D" parent="." unique_id=778940587]
+position = Vector2(953, 547)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jxtxx")
+
+[node name="Image(3)" type="Sprite2D" parent="." unique_id=1338823195]
+position = Vector2(946, 549)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_wb4g2")
+
+[node name="Image(4)" type="Sprite2D" parent="." unique_id=1579425814]
+position = Vector2(944, 553)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_v0pok")
+
+[node name="Image(5)" type="Sprite2D" parent="." unique_id=1358999442]
+position = Vector2(946, 551.5)
+scale = Vector2(0.49603173, 0.49697584)
+texture = ExtResource("4_wii62")
+
+[node name="Image(6)" type="Sprite2D" parent="." unique_id=60549499]
+position = Vector2(945, 552.5)
+scale = Vector2(0.49309662, 0.49505928)
+texture = ExtResource("5_vlt52")
+
+[node name="Image(7)" type="Sprite2D" parent="." unique_id=1489714068]
+position = Vector2(944, 553.5)
+scale = Vector2(0.4912281, 0.49316406)
+texture = ExtResource("6_iew4b")
