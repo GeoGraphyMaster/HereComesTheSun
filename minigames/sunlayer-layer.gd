@@ -12,12 +12,25 @@ var original_position := Vector2.ZERO
 var current_drop_zone = null
 
 func _ready():
+	custom_minimum_size = Vector2(100, 100)   
+	mouse_filter = Control.MOUSE_FILTER_STOP
+	print(name, " global position: ", global_position, " size: ", size)
 	original_position = global_position
 	mouse_filter = Control.MOUSE_FILTER_STOP   # Receive input even when over other controls
 	add_to_group("layers")
 	modulate = Color.GRAY   # Make it gray initially
 
 func _gui_input(event):
+	print("_gui_input received: ", event)  # 添加这一行
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			print("Mouse button pressed")  # 确认按下
+			_start_drag()
+		else:
+			if dragging:
+				print("Mouse button released")
+				_end_drag()
+		accept_event()
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.pressed:
 			_start_drag()
@@ -27,6 +40,13 @@ func _gui_input(event):
 		accept_event()
 
 func _start_drag():
+	if not game_manager:
+		print("ERROR: game_manager is null in _start_drag()")
+		return
+	dragging = true
+	drag_offset = get_global_mouse_position() - global_position
+	z_index = 100
+	game_manager.show_layer_tooltip(self)
 	dragging = true
 	drag_offset = get_global_mouse_position() - global_position
 	z_index = 100   # Bring to front

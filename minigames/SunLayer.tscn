@@ -1,48 +1,150 @@
 [gd_scene format=3 uid="uid://didu5f21qqqgh"]
 
 [ext_resource type="Texture2D" uid="uid://c72ilwixgba8j" path="res://image (2).png" id="1_jxtxx"]
+[ext_resource type="Script" uid="uid://cu1n2y6t5qa4x" path="res://minigames/sunLayersDefalt.gd" id="1_p1ymn"]
+[ext_resource type="Script" uid="uid://6k7071uqeiqe" path="res://minigames/sunlayer-tooltip.gd" id="2_j0a81"]
 [ext_resource type="Texture2D" uid="uid://do8bgjdxcu78m" path="res://image (3).png" id="2_wb4g2"]
+[ext_resource type="Script" uid="uid://tjs7fifvo43r" path="res://minigames/sunlayer-sundiagram.gd" id="3_rsff8"]
 [ext_resource type="Texture2D" uid="uid://d4kb760h5104u" path="res://image (4).png" id="3_v0pok"]
 [ext_resource type="Texture2D" uid="uid://8lwmt3sekhkp" path="res://image (5).png" id="4_wii62"]
-[ext_resource type="Texture2D" uid="uid://bnxofree2j4lu" path="res://image (6).png" id="5_vlt52"]
+[ext_resource type="Script" uid="uid://ivtyar7k6htp" path="res://minigames/sunlayer-dropzone.gd" id="5_uwmdq"]
+[ext_resource type="Script" uid="uid://cwb3exillgne1" path="res://minigames/sunlayer-layer.gd" id="6_7b4rg"]
 [ext_resource type="Texture2D" uid="uid://bbg1cq7dgt4x8" path="res://image (7).png" id="6_iew4b"]
+[ext_resource type="Texture2D" uid="uid://3vlwv1leuink" path="res://image (1).png" id="7_wb4g2"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0uneq"]
-load_path = "res://.godot/imported/image (1).png-33ee91bf1b09a76bbd697aff9013fd0f.ctex"
+[node name="SunLayer" type="Control" unique_id=753970144]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_p1ymn")
 
-[node name="SunLayer" type="Node2D" unique_id=1190992409]
+[node name="Tooltip" type="Label" parent="." unique_id=384252716]
+layout_mode = 0
+script = ExtResource("2_j0a81")
 
-[node name="Image(1)" type="Sprite2D" parent="." unique_id=328332676]
-position = Vector2(950, 550)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("CompressedTexture2D_0uneq")
+[node name="SunDiagram" type="Control" parent="." unique_id=1720216509]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_rsff8")
 
-[node name="Image(2)" type="Sprite2D" parent="." unique_id=778940587]
-position = Vector2(953, 547)
-scale = Vector2(0.5, 0.5)
+[node name="core" type="ColorRect" parent="SunDiagram" unique_id=2136535953]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_uwmdq")
+
+[node name="radiative" type="ColorRect" parent="SunDiagram" unique_id=2144121970]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_uwmdq")
+
+[node name="convective" type="ColorRect" parent="SunDiagram" unique_id=1661391996]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_uwmdq")
+
+[node name="photosphere" type="ColorRect" parent="SunDiagram" unique_id=1576981476]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_uwmdq")
+
+[node name="chromosphere" type="ColorRect" parent="SunDiagram" unique_id=2134832060]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_uwmdq")
+
+[node name="corona" type="ColorRect" parent="SunDiagram" unique_id=1118829108]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_uwmdq")
+
+[node name="PartsBin" type="Control" parent="." unique_id=1804708139]
+anchors_preset = 0
+offset_left = 45.0
+offset_top = 351.0
+offset_right = 1071.0
+offset_bottom = 1043.0
+mouse_filter = 2
+
+[node name="Corezone" type="TextureRect" parent="PartsBin" unique_id=419936843]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
+offset_left = 423.0
+offset_top = 112.0
+offset_right = 723.0
+offset_bottom = 412.0
+mouse_filter = 0
+texture = ExtResource("7_wb4g2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("6_7b4rg")
+
+[node name="Radiativezone" type="TextureRect" parent="PartsBin" unique_id=1136798582]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
+offset_left = 324.0
+offset_top = -68.0
+offset_right = 830.0
+offset_bottom = 585.0
+mouse_filter = 0
 texture = ExtResource("1_jxtxx")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("6_7b4rg")
 
-[node name="Image(3)" type="Sprite2D" parent="." unique_id=1338823195]
-position = Vector2(946, 549)
-scale = Vector2(0.5, 0.5)
+[node name="Convectivezone" type="TextureRect" parent="PartsBin" unique_id=1884072263]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 114.0
+offset_top = -39.0
+offset_right = 1024.0
+offset_bottom = 562.0
+mouse_filter = 0
 texture = ExtResource("2_wb4g2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("6_7b4rg")
 
-[node name="Image(4)" type="Sprite2D" parent="." unique_id=1579425814]
-position = Vector2(944, 553)
-scale = Vector2(0.5, 0.5)
+[node name="Photospherezone" type="TextureRect" parent="PartsBin" unique_id=122487286]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 151.0
+offset_top = -40.0
+offset_right = 984.0
+offset_bottom = 571.0
+mouse_filter = 0
 texture = ExtResource("3_v0pok")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("6_7b4rg")
 
-[node name="Image(5)" type="Sprite2D" parent="." unique_id=1358999442]
-position = Vector2(946, 551.5)
-scale = Vector2(0.49603173, 0.49697584)
+[node name="Chromospherezone" type="TextureRect" parent="PartsBin" unique_id=1493054041]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 138.0
+offset_top = -60.0
+offset_right = 1002.0
+offset_bottom = 587.0
+mouse_filter = 0
 texture = ExtResource("4_wii62")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("6_7b4rg")
 
-[node name="Image(6)" type="Sprite2D" parent="." unique_id=60549499]
-position = Vector2(945, 552.5)
-scale = Vector2(0.49309662, 0.49505928)
-texture = ExtResource("5_vlt52")
-
-[node name="Image(7)" type="Sprite2D" parent="." unique_id=1489714068]
-position = Vector2(944, 553.5)
-scale = Vector2(0.4912281, 0.49316406)
+[node name="Coronazone" type="TextureRect" parent="PartsBin" unique_id=1964472194]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 56.0
+offset_top = -63.0
+offset_right = 1079.0
+offset_bottom = 591.0
+mouse_filter = 0
 texture = ExtResource("6_iew4b")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("6_7b4rg")
