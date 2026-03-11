@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c72ilwixgba8j" path="res://image (2).png" id="1_jxtxx"]
 [ext_resource type="Script" uid="uid://cu1n2y6t5qa4x" path="res://minigames/sunLayersDefalt.gd" id="1_p1ymn"]
-[ext_resource type="Script" uid="uid://6k7071uqeiqe" path="res://minigames/sunlayer-tooltip.gd" id="2_j0a81"]
 [ext_resource type="Texture2D" uid="uid://do8bgjdxcu78m" path="res://image (3).png" id="2_wb4g2"]
-[ext_resource type="Script" uid="uid://tjs7fifvo43r" path="res://minigames/sunlayer-sundiagram.gd" id="3_rsff8"]
 [ext_resource type="Texture2D" uid="uid://d4kb760h5104u" path="res://image (4).png" id="3_v0pok"]
 [ext_resource type="Texture2D" uid="uid://8lwmt3sekhkp" path="res://image (5).png" id="4_wii62"]
 [ext_resource type="Script" uid="uid://ivtyar7k6htp" path="res://minigames/sunlayer-dropzone.gd" id="5_uwmdq"]
@@ -12,72 +10,50 @@
 [ext_resource type="Texture2D" uid="uid://bbg1cq7dgt4x8" path="res://image (7).png" id="6_iew4b"]
 [ext_resource type="Texture2D" uid="uid://3vlwv1leuink" path="res://image (1).png" id="7_wb4g2"]
 
+[sub_resource type="GDScript" id="GDScript_wii62"]
+script/source = "extends Control
+
+func light_up():
+	# Simple visual feedback: make the whole diagram glow yellow
+	modulate = Color.YELLOW
+	# You can add an animation or sound here
+"
+
 [node name="SunLayer" type="Control" unique_id=753970144]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_p1ymn")
 
-[node name="Tooltip" type="Label" parent="." unique_id=384252716]
-layout_mode = 0
-script = ExtResource("2_j0a81")
-
-[node name="SunDiagram" type="Control" parent="." unique_id=1720216509]
+[node name="DropZone" type="Control" parent="." unique_id=1720216509]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("3_rsff8")
+script = SubResource("GDScript_wii62")
 
-[node name="core" type="ColorRect" parent="SunDiagram" unique_id=2136535953]
+[node name="targetzone" type="ColorRect" parent="DropZone" unique_id=1118829108]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("5_uwmdq")
-
-[node name="radiative" type="ColorRect" parent="SunDiagram" unique_id=2144121970]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("5_uwmdq")
-
-[node name="convective" type="ColorRect" parent="SunDiagram" unique_id=1661391996]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("5_uwmdq")
-
-[node name="photosphere" type="ColorRect" parent="SunDiagram" unique_id=1576981476]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("5_uwmdq")
-
-[node name="chromosphere" type="ColorRect" parent="SunDiagram" unique_id=2134832060]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("5_uwmdq")
-
-[node name="corona" type="ColorRect" parent="SunDiagram" unique_id=1118829108]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1100.0
+offset_top = 200.0
+offset_right = 1800.0
+offset_bottom = 900.0
+color = Color(7.219613e-08, 0.13349614, 0.39257702, 1)
 script = ExtResource("5_uwmdq")
 
 [node name="PartsBin" type="Control" parent="." unique_id=1804708139]
 anchors_preset = 0
-offset_left = 45.0
-offset_top = 351.0
-offset_right = 1071.0
-offset_bottom = 1043.0
+offset_left = 39.0
+offset_top = 356.0
+offset_right = 1065.0
+offset_bottom = 1048.0
 mouse_filter = 2
 
 [node name="Corezone" type="TextureRect" parent="PartsBin" unique_id=419936843]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 0
-offset_left = 423.0
-offset_top = 112.0
-offset_right = 723.0
-offset_bottom = 412.0
+offset_left = 111.0
+offset_top = 282.0
+offset_right = 411.0
+offset_bottom = 582.0
 mouse_filter = 0
 texture = ExtResource("7_wb4g2")
 expand_mode = 1
@@ -87,10 +63,10 @@ script = ExtResource("6_7b4rg")
 [node name="Radiativezone" type="TextureRect" parent="PartsBin" unique_id=1136798582]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 0
-offset_left = 324.0
-offset_top = -68.0
-offset_right = 830.0
-offset_bottom = 585.0
+offset_left = 76.0
+offset_top = 100.0
+offset_right = 582.0
+offset_bottom = 622.0
 mouse_filter = 0
 texture = ExtResource("1_jxtxx")
 expand_mode = 1
@@ -100,10 +76,10 @@ script = ExtResource("6_7b4rg")
 [node name="Convectivezone" type="TextureRect" parent="PartsBin" unique_id=1884072263]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 114.0
-offset_top = -39.0
-offset_right = 1024.0
-offset_bottom = 562.0
+offset_left = 169.0
+offset_top = 86.0
+offset_right = 778.0
+offset_bottom = 687.0
 mouse_filter = 0
 texture = ExtResource("2_wb4g2")
 expand_mode = 1
@@ -113,10 +89,10 @@ script = ExtResource("6_7b4rg")
 [node name="Photospherezone" type="TextureRect" parent="PartsBin" unique_id=122487286]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 151.0
-offset_top = -40.0
-offset_right = 984.0
-offset_bottom = 571.0
+offset_left = 144.0
+offset_top = 100.0
+offset_right = 766.0
+offset_bottom = 711.0
 mouse_filter = 0
 texture = ExtResource("3_v0pok")
 expand_mode = 1
@@ -126,10 +102,10 @@ script = ExtResource("6_7b4rg")
 [node name="Chromospherezone" type="TextureRect" parent="PartsBin" unique_id=1493054041]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 138.0
-offset_top = -60.0
-offset_right = 1002.0
-offset_bottom = 587.0
+offset_left = 45.0
+offset_top = 68.0
+offset_right = 715.0
+offset_bottom = 715.0
 mouse_filter = 0
 texture = ExtResource("4_wii62")
 expand_mode = 1
@@ -139,12 +115,23 @@ script = ExtResource("6_7b4rg")
 [node name="Coronazone" type="TextureRect" parent="PartsBin" unique_id=1964472194]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 56.0
-offset_top = -63.0
-offset_right = 1079.0
-offset_bottom = 591.0
+offset_left = 238.0
+offset_top = 22.0
+offset_right = 923.0
+offset_bottom = 676.0
 mouse_filter = 0
 texture = ExtResource("6_iew4b")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("6_7b4rg")
+
+[node name="InfoLabel" type="Label" parent="." unique_id=206946335]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 6.0
+offset_right = 1096.0
+offset_bottom = 423.0
+theme_override_font_sizes/font_size = 100
+text = "Drag each sun layer
+below in order to the 
+blue box"
