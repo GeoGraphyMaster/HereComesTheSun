@@ -152,15 +152,3 @@ offset_top = 526.0
 offset_right = 486.0
 offset_bottom = 663.0
 theme_override_font_sizes/font_size = 50
-
-[node name="Label" type="Label" parent="." unique_id=1002232407]
-offset_left = 30.0
-offset_top = 826.0
-offset_right = 778.0
-offset_bottom = 1183.0
-theme_override_font_sizes/font_size = 30
-text = "Move your mouse around to 
-make the solar wind particle 
-get to the Earth, and collide 
-with the atmospheric particles 
-to create aurora!"

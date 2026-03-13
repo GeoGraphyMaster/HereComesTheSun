@@ -59,6 +59,7 @@ texture = ExtResource("7_wb4g2")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("6_7b4rg")
+layer_name = "Core"
 
 [node name="Radiativezone" type="TextureRect" parent="PartsBin" unique_id=1136798582]
 custom_minimum_size = Vector2(1, 1)
@@ -72,6 +73,7 @@ texture = ExtResource("1_jxtxx")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("6_7b4rg")
+layer_name = "Radiative Zone"
 
 [node name="Convectivezone" type="TextureRect" parent="PartsBin" unique_id=1884072263]
 custom_minimum_size = Vector2(100, 100)
@@ -85,6 +87,7 @@ texture = ExtResource("2_wb4g2")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("6_7b4rg")
+layer_name = "Convective Zone"
 
 [node name="Photospherezone" type="TextureRect" parent="PartsBin" unique_id=122487286]
 custom_minimum_size = Vector2(100, 100)
@@ -98,6 +101,7 @@ texture = ExtResource("3_v0pok")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("6_7b4rg")
+layer_name = "Photosphere"
 
 [node name="Chromospherezone" type="TextureRect" parent="PartsBin" unique_id=1493054041]
 custom_minimum_size = Vector2(100, 100)
@@ -111,6 +115,7 @@ texture = ExtResource("4_wii62")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("6_7b4rg")
+layer_name = "Chromosphere"
 
 [node name="Coronazone" type="TextureRect" parent="PartsBin" unique_id=1964472194]
 custom_minimum_size = Vector2(100, 100)
@@ -124,6 +129,7 @@ texture = ExtResource("6_iew4b")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("6_7b4rg")
+layer_name = "Corona"
 
 [node name="InfoLabel" type="Label" parent="." unique_id=206946335]
 layout_mode = 0
@@ -131,7 +137,14 @@ offset_left = 30.0
 offset_top = 6.0
 offset_right = 1096.0
 offset_bottom = 423.0
+theme_override_font_sizes/font_size = 50
+text = "Drag each sun layer below in order to the blue box"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=390472108]
+
+[node name="LayerNameLabel" type="Label" parent="CanvasLayer" unique_id=725903346]
+offset_left = 47.0
+offset_top = 178.0
+offset_right = 87.0
+offset_bottom = 315.0
 theme_override_font_sizes/font_size = 100
-text = "Drag each sun layer
-below in order to the 
-blue box"

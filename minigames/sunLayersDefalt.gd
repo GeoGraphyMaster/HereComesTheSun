@@ -1,28 +1,41 @@
 extends Control
 
-var layers_data = {
-	"Core": {"temperature": "15 million °C", "thickness": "N/A"},
-	"Radiative Zone": {"temperature": "7 million °C", "thickness": "300000 km"},
-	"Convective Zone": {"temperature": "2 million °C", "thickness": "200000 km"},
-	"Photosphere": {"temperature": "6200~3700 °C", "thickness": "500 km"},
-	"Chromosphere": {"temperature": "3700~7700 °C", "thickness": "10000 km"},
-	"Corona": {"temperature": "500000 °C", "thickness": "5000000 km"}
-}
-
-@onready var info_label = $InfoLabel   # 引用屏幕上的信息显示标签
+@onready var label = $CanvasLayer/LayerNameLabel
 
 func _ready():
-	# 为每个层设置数据，并传入 GameManager 引用
-	for layer in get_tree().get_nodes_in_group("layers"):
-		if layer.layer_name in layers_data:
-			layer.layer_data = layers_data[layer.layer_name]
-			layer.game_manager = self   # 让层可以调用 GameManager 的方法
-		else:
-			print("Warning: layer ", layer.name, " has unknown layer_name: ", layer.layer_name)
+	label.text = ""
+	label.add_theme_color_override("font_color", Color.WHITE)
+	label.add_theme_font_size_override("font_size", 100)
+	label.position = Vector2(200, 200)
+	print("done")
 
-# 供 Layer 调用的方法，在屏幕上显示层信息
-func display_layer_info(layer_name: String, data: Dictionary):
-	var text = layer_name + ":\n" + \
-			   "Temperature: " + data["temperature"] + "\n" + \
-			   "Thickness: " + data["thickness"]
-	info_label.text = text
+	for layer in get_tree().get_nodes_in_group("layers"):
+		layer.game_manager = self
+
+func on_layer_placed(layer_name: String):
+	
+	print("original: '", layer_name, "', length: ", layer_name.length())
+	
+	
+	var cleaned = layer_name.strip_edges()
+	print("cleaned: '", cleaned, "', length: ", cleaned.length())
+	
+	
+	var lower = cleaned.to_lower()
+	
+	if lower == "corona":
+		label.text = "Corona"
+	elif lower == "chromosphere":
+		label.text = "Chromosphere"
+	elif lower == "photosphere":
+		label.text = "Photosphere"
+	elif lower == "convective zone":
+		label.text = "Convective Zone"
+	elif lower == "radiative zone":
+		label.text = "Radiative Zone"
+	elif lower == "core":
+		label.text = "Core"
+	else:
+		label.text = "error: " + cleaned   
+		print("nothing: ", cleaned)
+	

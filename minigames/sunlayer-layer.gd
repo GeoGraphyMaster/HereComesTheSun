@@ -4,15 +4,13 @@ var dragging := false
 var drag_offset := Vector2.ZERO
 var original_position := Vector2.ZERO
 
-var layer_name: String          
-var layer_data: Dictionary     
-var game_manager: Node           
+@export var layer_name: String   
+var game_manager: Node
 
 func _ready():
 	original_position = global_position
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	add_to_group("layers")
-	
 
 func _gui_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -33,8 +31,10 @@ func _end_drag():
 	z_index = 0
 	var drop_zone = _get_drop_zone_under_mouse()
 	if drop_zone:
+		var offset = (drop_zone.size - size) / 2
+		global_position = drop_zone.global_position + offset
 		if game_manager:
-			game_manager.display_layer_info(layer_name, layer_data)
+			game_manager.on_layer_placed(layer_name)   
 	else:
 		global_position = original_position
 

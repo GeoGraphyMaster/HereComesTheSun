@@ -1,7 +1,7 @@
 extends Node2D
 
 var score = 0
-var max_score = 5
+var max_score = 6
 
 func _ready():
 	$CanvasLayer/ScoreLabel.text = "Score: 0/" + str(max_score)
