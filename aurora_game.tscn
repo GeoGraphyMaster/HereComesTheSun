@@ -12,14 +12,6 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq5bn"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_awmtt"]
-
-[sub_resource type="Curve2D" id="Curve2D_yj4i7"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -458.5, 568.4, 0, 0, 0, 0, -394, 562, 0, 0, 0, 0, -318.75, 555.6, 0, 0, 0, 0, -275.75, 550.80005, 0, 0, 0, 0, -243.5, 549.19995, 0, 0, 0, 0, -146.75, 546, 0, 0, 0, 0, -103.75, 544.4, 0, 0, 0, 0, 100.5, 542.80005, 0, 0, 0, 0, 272.5, 544.4, 0, 0, 0, 0, 412.25, 547.6, 0, 0, 0, 0, 530.5, 555.6, 0, 0, 0, 0, 646.5112, 563.0809, 0, 0, 0, 0, 713.25, 568.4, 0, 0, 0, 0, 853, 579.6, 0, 0, 0, 0, 928.25, 587.6, 0, 0, 0, 0, 1111, 605.19995, 0, 0, 0, 0, 1283, 627.6, 0, 0, 0, 0, 1433.5, 656.4, 0, 0, 0, 0, 1541, 683.6, 0, 0, 0, 0, 1637.75, 714, 0, 0, 0, 0, 1713, 747.6, 0, 0, 0, 0, 1777.5, 784.4, 0, 0, 0, 0, 1809.75, 819.6, 0, 0, 0, 0, 1831.25, 850, 0, 0, 0, 0, 1809.75, 893.19995, 0, 0, 0, 0, 1713, 928.4, 0, 0, 0, 0, 1637.75, 952.4, 0, 0, 0, 0, 1498, 970)
-}
-point_count = 28
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_8nv60"]
 radius = 29.34
 
@@ -30,11 +22,11 @@ script = ExtResource("1_mkmuf")
 script = ExtResource("2_m18pj")
 
 [node name="sunny sun" type="Sprite2D" parent="Sun" unique_id=1057737641]
-position = Vector2(256, 256)
+position = Vector2(256, 259)
 texture = ExtResource("3_awmtt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sun" unique_id=108561656]
-position = Vector2(259.00003, 257.99997)
+position = Vector2(259, 259)
 scale = Vector2(22, 22)
 shape = SubResource("CircleShape2D_77o5y")
 
@@ -55,25 +47,6 @@ shape = SubResource("CircleShape2D_kq5bn")
 position = Vector2(1550, 800)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_lulog")
-
-[node name="MagneticZone" type="Area2D" parent="." unique_id=497884543]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MagneticZone" unique_id=900225574]
-position = Vector2(1550, 800)
-scale = Vector2(20, 20)
-shape = SubResource("CircleShape2D_awmtt")
-
-[node name="Path2D" type="Path2D" parent="." unique_id=1933784699]
-position = Vector2(1592.6511, 261.75)
-scale = Vector2(0.093023255, 0.625)
-curve = SubResource("Curve2D_yj4i7")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1323686346]
-position = Vector2(-458.5, 568.4)
-rotation = -0.09890145
-
-[node name="Line2D" type="Line2D" parent="Path2D" unique_id=458126018]
-width = 1.0
 
 [node name="ParticlesContainer" type="Node2D" parent="." unique_id=290109713]
 
@@ -169,7 +142,25 @@ shape = SubResource("CircleShape2D_8nv60")
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=221989288]
 offset_left = 700.0
-offset_right = 1173.0
-offset_bottom = 137.0
+offset_right = 3927.0
+offset_bottom = 357.0
 theme_override_font_sizes/font_size = 100
-text = "Score: 0/5"
+
+[node name="MessageLabel1" type="Label" parent="CanvasLayer" unique_id=1870378016]
+offset_left = 446.0
+offset_top = 526.0
+offset_right = 486.0
+offset_bottom = 663.0
+theme_override_font_sizes/font_size = 50
+
+[node name="Label" type="Label" parent="." unique_id=1002232407]
+offset_left = 30.0
+offset_top = 826.0
+offset_right = 778.0
+offset_bottom = 1183.0
+theme_override_font_sizes/font_size = 30
+text = "Move your mouse around to 
+make the solar wind particle 
+get to the Earth, and collide 
+with the atmospheric particles 
+to create aurora!"

@@ -6,7 +6,6 @@ enum GasType { OXYGEN_GREEN, OXYGEN_RED, NITROGEN_BLUE }
 var collected = false
 
 func _ready():
-	# Set color based on type (optional, if not set by sprite)
 	match gas_type:
 		GasType.OXYGEN_GREEN:
 			$Sprite2D.modulate = Color.GREEN
@@ -15,14 +14,12 @@ func _ready():
 		GasType.NITROGEN_BLUE:
 			$Sprite2D.modulate = Color.BLUE
 	
-	# Connect body_entered
-	body_entered.connect(_on_body_entered)
+	area_entered.connect(_on_area_entered)
 
-func _on_body_entered(body):
-	if body.name == "Player" and not collected:
+func _on_area_entered(area):
+	if area.name == "Player" and not collected:
 		collected = true
-		# Update score and show message
-		var game = get_node("/root/AuroraGame") # or use an autoload
-		game.on_particle_collected(self)
-		# Hide or queue free
+		var game = get_tree().current_scene
+		if game and game.has_method("on_particle_collected"):
+			game.on_particle_collected(self)
 		queue_free()
